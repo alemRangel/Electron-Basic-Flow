@@ -12,3 +12,11 @@ function send(event){
   let nombre = document.getElementById("nombre").value;  //Obtenemos el valor de nuestro texto
   ipcRenderer.send('form-listener',nombre); //Mandamos el valor de la vista al proceso principal
 }
+
+function apiMicrosoft(){
+  ipcRenderer.send('computer-vision-request',"Enviado de index Html");
+}
+
+function apiAmazon(){
+  ipcRenderer.send('textract-request',"Enviado de Index Html")
+}
